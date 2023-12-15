@@ -1,0 +1,37 @@
+{% extends "app/head.html" %}
+
+{% block content %}
+
+<div style="margin-left: 30%; margin-right:20%; margin-top: 10%; border: 1px solid blue; align-items: center; padding: 20px;">
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" name="name" >
+            </div>
+
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" name="email">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="inputcontact">contactnum</label>
+            <input type="text" class="form-control" id="inputcontact" name="contactnum">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="inputText">Text Area</label>
+            <input type="text" class="form-control" id="inputText" name="textarea" >
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+      </form>
+
+</div>
+
+{% endblock %}
