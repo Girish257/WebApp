@@ -16,11 +16,19 @@ def abc(request):
 
     if request.method == 'POST':
         subject = request.POST.get('name')
-        message = f'Hi , thank you for registering in geeksforgeeks.'
+        message = f'Hi, User'
+        
         email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['girish.test1t111@gmail.com' ]
-        # email_from = [request.POST.get('email')]
+        recipient_list = ['girish.test1g@gmail.com' ]
+
+        # email_from1 = [request.POST.get('email')]
         send_mail( subject, message, email_from, recipient_list )
-        return HttpResponse("done")
+
+
+        message1 = f'ADMIN'
+        recipient_list1 = ['girish.test1t@gmail.com' ]
+
+        send_mail( subject, message1, email_from, recipient_list1 )
+        return render(request ,'app/thankyou.html')
     else:
         return render(request, 'app/enquiry.html', {})
