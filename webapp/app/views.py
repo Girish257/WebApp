@@ -32,3 +32,9 @@ def abc(request):
         return render(request ,'app/thankyou.html')
     else:
         return render(request, 'app/enquiry.html', {})
+    
+def new(request):
+    return render(request, 'app/new.html')
+
+def two(request):
+    return render(request, 'app/two.html')
