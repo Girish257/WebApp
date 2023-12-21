@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.conf import settings
 from django. contrib import messages
 from django.core.mail import send_mail
@@ -7,6 +7,7 @@ from django.core.mail import send_mail
 
 # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect
+
 
 
 def index(request):
@@ -27,9 +28,17 @@ def abc(request):
 
         message1 = f'ADMIN'
         recipient_list1 = ['girish.test1t@gmail.com' ]
+        Successfully = 'Message sent'
+
 
         send_mail( subject, message1, email_from, recipient_list1 )
-        return render(request ,'app/thankyou.html')
+        
+        messages.success(
+            request ,'sent successfully')
+        
+        return redirect("abc")
+        # return render(request ,'app/thankyou.html')
+    
     else:
         return render(request, 'app/enquiry.html', {})
     
