@@ -35,7 +35,7 @@
         font-family: "Courier New", monospace;
       }
 
-      @media (max-width: 500px) {
+      @media (max-width: 768px) {
         .abc {
           display: block !important;
         }
@@ -50,9 +50,38 @@
           border: 10px solid black;
           display: none !important;
         }
+        .imgtag{
+          width: 100% !important;
+          margin: 0 !important;
+        }
+        .gridtag{
+          background-color: rgb(221, 232, 236);
+          padding: 16px !important;
+          margin: 0 !important;
+          position: absolute !important;
+          left: 15px !important;
+          z-index: 0 !important;
+          top: 350px !important;
+        }
+        .gridtwo{
+          background-color: rgb(221, 232, 236);
+          padding: 16px !important;
+          margin: 0 !important;
+          position: absolute !important;
+          left: 15px !important;
+          z-index: 0 !important;
+          top: 840px !important;
+        }
+        .accordion{
+          width: 98% !important;
+                   
+        }
+        .xy{
+          margin: 5% !important;
+        }
       }
 
-      @media (min-width: 500px) {
+      @media (min-width: 768px) {
         .ten {
           display: none !important;
         }
@@ -123,10 +152,18 @@
                 >Home</a
               >
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a
                 class="nav-link"
                 href="app/static/image/testing_xyz (8).pdf"
+                target="_blank"
+                >Features</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% url 'thankyou' %}"
                 target="_blank"
                 >Features</a
               >

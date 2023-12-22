@@ -1,6 +1,78 @@
-<h1>Thank You</h1>
+{% extends "app/head.html" %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/main.css" />
+    <style>
+
+        .input-name {
+            text-align: start !important;
+        }
+        </style>
+</head>
+
+<body>
+
+    {% block content %}
+
+<img class="imgtag" src="{% static 'image/tablet.jpeg' %}" alt="" style="width: 80rem; height: 20rem; margin-left: 20rem;">
 
 
-<div >
+<div  style="display: flex; justify-content: space-evenly;">
+
+    <div class="gridtag" style="width: 25rem; height: 30rem; background-color: rgb(221, 232, 236); padding-top: 10px; padding-left: 10px ;position: absolute; z-index: 1;top: 231px;left: 350px;">
+        <h4 style="text-align: center;">Forms</h4>
+        <hr>
+
+        <div class="form-row" style="align-items: center;">
+
+            <div class="form-group col-md-10">
+                <label for="inputName" class="input-name">Name :</label>
+                <input type="text" class="form-control" id="inputName" name="name" >
+            </div>
+
+            <div class="form-group col-md-10">
+                <label for="inputEmail4">Email :</label>
+                <input type="email" class="form-control" id="inputEmail4" name="email">
+            </div>
+
+            <div class="form-group col-md-10">
+                <label for="inputName">Company Name :</label>
+                <input type="text" class="form-control" id="inputName" name="companyname" >
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="gridtwo" style=" width: 20rem; height: 30rem; background-color: rgb(221, 232, 236);text-align: center;  padding-top: 10px; position: absolute;
+    z-index: 1;
+    top: 231px;
+    right: 26rem;">
+        <h4>Contact</h4>
+        <hr>
+        <h5>Lorem, ipsum dolor.</h5>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        <hr>
+        <p>Lorem, ipsum dolor.lorem</p>
+    </div>
 
 </div>
+
+
+
+
+    
+
+    {% endblock %}
+
+</body>
+</html>

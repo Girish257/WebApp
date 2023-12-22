@@ -47,3 +47,6 @@ def new(request):
 
 def two(request):
     return render(request, 'app/two.html')
+
+def thankyou(request):
+    return render(request, 'app/thankyou.html')

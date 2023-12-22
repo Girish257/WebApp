@@ -4,3 +4,7 @@
 #one{
     background-color: lightblue;
 }
+
+.input-name {
+    text-align: start !important;
+}
